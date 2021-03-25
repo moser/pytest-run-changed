@@ -1,0 +1,7 @@
+{
+    "example_tests.test_mod1--test_fastest": 0.0004538630018942058,
+    "example_tests.test_mod1--test_kind_of_slow": 0.03082156999153085,
+    "example_tests.test_mod1--test_slow": 0.05073647198150866,
+    "example_tests.test_mod2--test_fast": 0.010952846991131082,
+    "example_tests.test_mod2--test_slowest": 0.08089600098901428
+}

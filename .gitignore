@@ -1,0 +1,7 @@
+*.swp
+*.pyc
+.venv
+.eggs
+pytest_run_changed.egg-info/
+.pytest-deps
+build/
