@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="pytest-run-changed",
-    version="0.1",
+    version="0.2",
     url="https://github.com/moser/pytest-run-changed",
     author="Martin Vielsmaier",
     author_email="moser@moserei.de",
@@ -10,7 +10,7 @@ setuptools.setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     keywords=[],
-    packages=setuptools.find_packages(),
+    packages=["pytest_run_changed"],
     install_requires=["pytest"],
     setup_requires=["pytest-runner"],
     tests_require=[],

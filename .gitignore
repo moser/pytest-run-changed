@@ -5,3 +5,4 @@
 pytest_run_changed.egg-info/
 .pytest-deps
 build/
+dist/
