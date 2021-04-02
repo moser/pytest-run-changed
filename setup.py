@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="pytest-run-changed",
-    version="0.2",
+    version="1.0.1",
     url="https://github.com/moser/pytest-run-changed",
     author="Martin Vielsmaier",
     author_email="moser@moserei.de",
@@ -16,8 +16,10 @@ setuptools.setup(
     tests_require=[],
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
+        "Framework :: Pytest",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Testing",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",

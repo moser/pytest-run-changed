@@ -17,9 +17,9 @@ TEST_FILES = set()
 def pytest_addoption(parser):
     group = parser.getgroup("run-changed")
     group.addoption(
-        "--dirty",
+        "--changed-only",
         action="store_true",
-        dest="dirty",
+        dest="changed_only",
         help="",
     )
 
@@ -63,8 +63,8 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_collection_modifyitems(session, config, items):
-    dirty_only = config.getoption("dirty")
-    if dirty_only and PATH.exists():
+    changed_only = config.getoption("changed_only")
+    if changed_only and PATH.exists():
         with open(PATH, "r") as fp:
             inverse_file_index = json.load(fp)
         file_index = collections.defaultdict(set)
@@ -95,7 +95,7 @@ def pytest_collection_modifyitems(session, config, items):
 
 @pytest.fixture(scope="function", autouse=True)
 def profile(request):
-    if request.config.getoption("dirty"):
+    if request.config.getoption("changed_only"):
         TEST_FILES.add(request.node.module.__file__)
 
         def trace_calls(frame, event, arg):
